@@ -25,15 +25,11 @@ class User < ActiveRecord::Base
 
   def User.new_token
   	SecureRandom.urlsafe_base64
-  	#creates the remember digest token.
-  	#Since token doesn't need a user object, it is created as a class method.
   end
 
   def remember
     self.remember_token = User.new_token 
-    #associates a remember token with the user and saves the corresponding remember digest to the database. Since, remember digest is a method as defined in the attribute accessor method, self. would mean that the writer method is called on the object User itself. 
     update_attribute(:remember_digest, User.digest(remember_token))
-    #update attribute for updating existing model in the database. 
   end
 
   def authenticated?(attribute, token)
