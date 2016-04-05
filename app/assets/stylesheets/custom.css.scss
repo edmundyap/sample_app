@@ -13,6 +13,13 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+.background { 
+  background: url(/assets/smartphone.jpg) no-repeat center center; 
+  height: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 body {
   padding-top: 60px;
 }
@@ -78,33 +85,20 @@ p {
   }
 }
 
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $light-gray;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
-}
-
 /* miscellaneous */
+
+.call_to_action {
+  position: relative;
+  display: inline-block; 
+  position: center;
+
+  h2 {
+  font-size: 1.35em;
+  font-weight: bold;
+  font-style: italic;
+  text-align: justify;
+  } 
+}
 
 .debug_dump {
   clear: both;
@@ -147,8 +141,11 @@ aside {
   margin-right: 10px;
 }
 
-.gravatar_edit {
+.container_gravater_edit {
   margin-top: 15px;
+  margin-bottom: 70px;
+  position: relative;
+  left: 45%;
 }
 
 .stats {
@@ -187,6 +184,11 @@ aside {
 
 .users.follow {
   padding: 0;
+}
+
+.feed_position {
+  margin-bottom: 150px;
+  float: right;
 }
 
 /* forms */
