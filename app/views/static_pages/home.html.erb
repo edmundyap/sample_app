@@ -1,14 +1,14 @@
 <% if logged_in? %>
-  <div class="row">
+  <div class="container row">
     <aside class="col-md-4">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
       <section class="stats">
-        <%= render 'shared/stats' %>
+          <%= render 'shared/stats' %>
       </section>
       <section class="micropost_form">
-        <%= render 'shared/micropost_form' %>
+          <%= render 'shared/micropost_form' %>
       </section>
     </aside>
     <div class="col-md-8">
@@ -17,18 +17,8 @@
     </div>
   </div>
 <% else %>
-	<div class="background">
-    <div class="call_to_action">
-  		<%= link_to "Sign Up Now!", signup_path, class: "btn btn-lg btn-primary" %>
-      <h2>
-        Easiest Way To Connect With Family and Friends
-      </h2>
-      <%= link_to "Tell Me More", about_path, class: "btn btn-lg btn-primary" %>
-
-      ;lfkdg
-      ;fdl;k
-      ;dlfd;k
-    </div>
-	</div>
+  <div>
+     <%= render 'layouts/landing_page_layout' %>
+  </div>
 <% end %>
  
