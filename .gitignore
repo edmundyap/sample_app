@@ -17,5 +17,5 @@
 /tmp
 
 # Ignore other unneeded files.
-/locales/secrets.yml
-/locales/database.yml
+config/locales/secrets.yml
+config/locales/database.yml
