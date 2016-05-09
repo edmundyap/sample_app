@@ -11,7 +11,6 @@ class SessionsController < ApplicationController
          params[:session][:remember_me] == '1' ? remember(user) : forget(user)
     	   redirect_back_or user
         else
-         #flash.now because render is not counted as a request. Without it, the flash will persist until the next request.
          message = "Account not activated."
          message += "Check your email for the activation link."
          flash[:warning] = message
