@@ -25,5 +25,6 @@ module SampleApp
     ENV['PATH'] = "/usr/local/bin:#{ENV['PATH']}"
     # Include the authenticity token in remote forms.
     config.action_view.embed_authenticity_token_in_remote_forms = true
+    config.assets.precompile += %w(style.css)
   end
 end
