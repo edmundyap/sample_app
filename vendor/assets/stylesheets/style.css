@@ -22,15 +22,6 @@
 		line-height: 1.75em;
 	}
 
-	a {
-		color: #629DD1;
-		text-decoration: none;
-	}
-
-		a:hover {
-			text-decoration: none;
-		}
-
 	strong, b {
 		color: #666f77;
 		font-weight: 500;
