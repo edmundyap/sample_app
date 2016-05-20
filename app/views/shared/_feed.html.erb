@@ -1,8 +1,25 @@
 <div class="container">
-	<% if @feed_items.any? %>
-	  <ol class="microposts">
-	    <%= render @feed_items %>
-	  </ol>
-	  <%= will_paginate @feed_items %>
-	<% end %>
+  <% if @feed_items.any? %>
+    <ol class="microposts">
+      <% @feed_items.each do |micropost| %>
+        <%= render micropost %>
+        <% if micropost.comments.any? %>
+          <% @comments = micropost.comments %>
+          <span class="content">
+            <h4><%= pluralize(@comments.count, "comment") %></h4>
+            <%@comments.each do |comment| %> 
+              <%= render comment %> 
+              <span class="timestamp">
+                Posted <%= time_ago_in_words(comment.created_at) %> ago.
+                <% if current_user?(comment.user) %>
+                  <%= link_to "delete", micropost_comment_path(micropost.id, comment.id), method: :delete, data: { confirm: "You sure?"} %>
+                <% end %>
+              </span>
+            <% end %>
+          </span>
+        <% end %>
+      <% end %>
+    </ol>
+    <%= will_paginate @feed_items %>
+  <% end %>
 </div>
