@@ -11,22 +11,23 @@
       <% if current_user?(micropost.user) %>
         <%= link_to "delete post", micropost, method: :delete, data: { confirm: "You sure?"} %>
       <% end %>
-      <% if logged_in? %>
-        <div class="glyphicon glyphicon-pencil" data-toggle="collapse" data-target="#m-<%= micropost.id %>" aria-expanded="false" aria-controls="m-<%= micropost.id %>">
-          <div class="collapse" id="m-<%= micropost.id %>">
-            <div>
-              <%= form_for ([micropost, @comment]) do |f| %>
-                <%= render 'shared/error_messages', object: f.object %>
-                <div class="field">
-                  <%= f.text_area :comment, placeholder: "Comment on post..." %>
-                </div>
-                  <%= f.submit "Comment", class: "btn btn-primary" %>
-              <%end%>
-            </div>
-          </div>
-        </div> 
-      <% end %>
     </span>
+    <% if logged_in? %>
+      <div class="content">
+        <div class="btn glyphicon glyphicon-pencil" data-toggle="collapse" data-target="#m-<%= micropost.id %>" aria-expanded="false" aria-controls="m-<%= micropost.id %>">
+        </div>
+          <div class="collapse col-xs-4" id="m-<%= micropost.id %>">
+            <%= form_for ([micropost, @comment]) do |f| %>
+              <%= render 'shared/error_messages', object: f.object %>
+              <div class="field">
+                <%= f.text_area :comment, placeholder: "Comment on post..." %>
+              </div>
+                <%= f.submit "Comment", class: "btn btn-primary" %>
+            <%end%>
+          </div>
+      </div> 
+    <% end %>
   </li>
 </div>
+
 

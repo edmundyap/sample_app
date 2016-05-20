@@ -6,7 +6,7 @@
         <% if micropost.comments.any? %>
           <% @comments = micropost.comments %>
           <span class="content">
-            <h4 class="glyphicon glyphicon-comment"><%= pluralize(@comments.count, "comment") %></h4>
+            <h4><%= pluralize(@comments.count, "comment") %></h4>
             <%@comments.each do |comment| %> 
               <%= render comment %> 
               <span class="timestamp">
