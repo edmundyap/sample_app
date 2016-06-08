@@ -1,25 +1,30 @@
-<div class="container">
-  <% if @feed_items.any? %>
-    <ol class="microposts">
+<% if @feed_items.any? %>
+  <div class="row">
+    <ol class="feed">
+      <h3>Tweets</h3>
       <% @feed_items.each do |micropost| %>
         <%= render micropost %>
         <% if micropost.comments.any? %>
           <% @comments = micropost.comments %>
-          <span class="content">
-            <h4><%= pluralize(@comments.count, "comment") %></h4>
-            <%@comments.each do |comment| %> 
-              <%= render comment %> 
-              <span class="timestamp">
-                Posted <%= time_ago_in_words(comment.created_at) %> ago.
-                <% if current_user?(comment.user) %>
-                  <%= link_to "delete", micropost_comment_path(micropost.id, comment.id), method: :delete, data: { confirm: "You sure?"} %>
-                <% end %>
+          <h4><%= pluralize(@comments.count, "comment") %></h4>
+          <%@comments.each do |comment| %> 
+            <li id="comment-<%= comment.id %>" class="comments">
+              <%= link_to gravatar_for(comment.user, size: 50), comment.user %>
+              <span class="user"><%= link_to comment.user.name, comment.user %></span>
+              <span class="content">
+                <%= comment.comment %>
               </span>
-            <% end %>
-          </span>
+              <span class="timestamp">
+              Posted <%= time_ago_in_words(comment.created_at) %> ago.
+              <% if current_user?(comment.user) %>
+                <%= link_to "delete", micropost_comment_path(micropost.id, comment.id), method: :delete, data: { confirm: "You sure?"} %>
+              <% end %>
+            </span>
+            </li>
+          <% end %>
         <% end %>
       <% end %>
     </ol>
-    <%= will_paginate @feed_items %>
-  <% end %>
-</div>
+  </div>
+  <%= will_paginate @feed_items %>
+<% end %>

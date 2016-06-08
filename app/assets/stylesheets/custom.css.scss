@@ -1,10 +1,5 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome.min";
-@import "skel";
-@import "style-xlarge";
-@import "style";
-
 
 /* mixins, variables, etc. */
 
@@ -41,6 +36,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  text-align: center;
 }
 
 h1 {
@@ -71,7 +67,7 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 1.5em;
   color: #d6d6c2;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -106,6 +102,10 @@ p {
   font-style: italic;
   text-align: justify;
   } 
+}
+
+.btn {
+  position: relative;
 }
 
 /* sidebar */
@@ -247,12 +247,21 @@ input {
 
 /* microposts */
 
-.microposts {
+.micropost{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-top: groove 1px;
+}
+
+.feed {
+  width: 600px;
+  display: inline-block;
   list-style: none;
-  padding: 0;
+  padding: 20px;
+  border: groove 1px;
   li {
-    padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+    list-style: none;
   }
   .user {
     margin-top: 5em;
@@ -270,6 +279,7 @@ input {
     color: $gray-light;
     display: block;
     margin-left: 60px;
+    text-decoration: none;
   }
   .gravatar {
     float: left;
@@ -290,4 +300,12 @@ span.picture {
   input {
     border: 0;
   }
+}
+
+/* comments */
+
+.comments {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
 }

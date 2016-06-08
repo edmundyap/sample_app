@@ -10,7 +10,7 @@ before_action :correct_user, only: :destroy
       flash[:success] = "Comment created!"
       redirect_to '/'
     else
-      render 'static_pages/home'
+      redirect_to '/'
     end
 	end
 
