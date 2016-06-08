@@ -10,6 +10,7 @@ before_action :correct_user, only: :destroy
       flash[:success] = "Comment created!"
       redirect_to '/'
     else
+      flash[:danger] = @comment.errors.full_messages.join(',')
       redirect_to '/'
     end
 	end
