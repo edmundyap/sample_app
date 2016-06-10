@@ -35,7 +35,6 @@ textarea {
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
   text-align: center;
 }
 
@@ -48,14 +47,6 @@ h1 {
 
 $light-gray: #777;
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $light-gray;
-}
 
 p {
   font-size: 1.1em;
@@ -78,28 +69,65 @@ p {
   }
 }
 
+header {
+  height: 70px;
+  padding: 10px 0;
+}
+
 /* miscellaneous */
 
 #background {
-    background-color: #3266cd;
+    background-color: #ffffe6;
     padding: 15em 0;
     text-align: center;
 }
 
-.landing_page_buttons {
-  
-
-  h2 {
-  display: inline;
-  font-size: 1.35em;
-  font-weight: bold;
-  font-style: italic;
-  text-align: justify;
-  } 
+.headline {
+  width: 300px;
+  padding: 15px;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin: auto;
+  text-align: center;
+  font-weight: normal;
+  color: $light-gray;
 }
 
-.btn {
-  position: relative;
+.learn_more {
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 10px;
+
+  a {
+    color: #000000;
+  }
+}
+
+.sign_up {
+  display: inline-block;
+  padding: 20px 26px;
+  font-size: 18px;
+  line-height: 1.33px;
+  border-radius: 12px;
+  background-color: #000000;
+  margin-right: 10px;
+}
+
+a {
+  color: #ffffff;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3399ff;
+}
+
+.tagline {
+  font-size: 25px;
+  font-style: italic;
 }
 
 /* sidebar */
