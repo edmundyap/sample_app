@@ -14,8 +14,8 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  margin-top: 50px;
-  padding-top: 50px;
+  margin-top: 3.57em;
+  padding-top: 3.57em;
 }
 
 section {
@@ -29,7 +29,7 @@ textarea {
 .center {
   text-align: center;
   h1 {
-  margin-bottom: 10px;
+  margin-bottom: 0.71em;
   }
 }
 
@@ -41,8 +41,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
+  letter-spacing: -0.05em;
+  margin-bottom: 2.14em;
   text-align: center;
 }
 
@@ -58,12 +58,12 @@ p {
 
 #logo {
   float: left;
-  margin-right: 10px;
+  margin-right: 0.71em;
   font-size: 1.5em;
   color: #d6d6c2;
   text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
+  letter-spacing: -0.07em;
+  padding-top: 0.64em;
   font-weight: bold;
   &:hover {
   text-decoration: none;
@@ -71,14 +71,14 @@ p {
 }
 
 header {
-  height: 70px;
-  padding: 10px 0;
+  height: 5em;
+  padding: 0.71em 0;
 }
 
 /* miscellaneous */
 
 .edit_profile {
-  margin-bottom: 20px;
+  margin-bottom: 1.43em;
 }
 
 #background {
@@ -88,10 +88,10 @@ header {
 }
 
 .headline {
-  width: 300px;
-  padding: 15px;
-  font-size: 40px;
-  letter-spacing: 1px;
+  width: 21.43em;
+  padding: 1.07em;
+  font-size: 2.86em;
+  letter-spacing: 0.07em;
   margin: auto;
   text-align: center;
   font-weight: normal;
@@ -99,9 +99,9 @@ header {
 }
 
 .learn_more {
-  font-size: 18px;
+  font-size: 1.29em;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 0.71em;
 
   a {
     color: #4d79ff;
@@ -110,12 +110,12 @@ header {
 
 .sign_up {
   display: inline-block;
-  padding: 20px 26px;
-  font-size: 18px;
-  line-height: 1.33px;
-  border-radius: 12px;
+  padding: 1.43em 1.86em;
+  font-size: 1.29em;
+  line-height: 0.095em;
+  border-radius: 0.86em;
   background-color: #000000;
-  margin-right: 10px;
+  margin-right: 0.71em;
 }
 
 a {
@@ -131,7 +131,7 @@ a:hover {
 }
 
 .tagline {
-  font-size: 25px;
+  font-size: 1.79em;
   font-style: italic;
 }
 
@@ -143,38 +143,38 @@ a:hover {
 
 aside {
   section.user_info {
-    margin-top: 20px;
+    margin-top: 1.43em;
   }
   section {
-    padding: 10px 0;
-    margin-top: 20px;
+    padding: 0.71em 0;
+    margin-top: 1.43em;
     &:first-child {
       border: 0;
       padding-top: 0;
     }
     span {
       display: block;
-      margin-bottom: 3px;
-      line-height: 1;
+      margin-bottom: 0.21em;
+      line-height: 1em;
     }
     h1 {
       font-size: 1.4em;
       text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
+      letter-spacing: -0.05em;
+      margin-bottom: 0.21em;
+      margin-top: 0em;
     }
   }
 }
 
 .gravatar {
   float: left;
-  margin-right: 10px;
+  margin-right: 0.71em;
 }
 
 .container_gravater_edit {
-  margin-top: 15px;
-  margin-bottom: 70px;
+  margin-top: 1.07em;
+  margin-bottom: 5em;
   position: relative;
   left: 45%;
 }
@@ -185,8 +185,8 @@ aside {
   padding: 0;
   a {
     float: left;
-    padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
+    padding: 0 0.71em;
+    border-left: 0.07em solid $gray-lighter;
     color: gray;
     &:first-child {
       padding-left: 0;
@@ -204,9 +204,9 @@ aside {
 
 .user_avatars {
   overflow: auto;
-  margin-top: 10px;
+  margin-top: 0.71em;
   .gravatar {
-    margin: 1px 1px;
+    margin: 0.07em 0.07em;
   }
   a {
     padding: 0;
@@ -220,9 +220,9 @@ aside {
 /* forms */
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: 0.07em solid #bbb;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 1.07em;
   @include box_sizing;
 }
 
@@ -234,7 +234,7 @@ input {
   color: red;
   ul {
     color: red;
-    margin: 0 0 30px 0;
+    margin: 0 0 2.14em 0;
   }
 }
 
@@ -246,10 +246,10 @@ input {
 }
 
 .checkbox {
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin-top: -0.71em;
+  margin-bottom: 0.71em;
   span {
-    margin-left: 20px;
+    margin-left: 1.43em;
     font-weight: normal;
   }
 }
@@ -263,11 +263,11 @@ input {
 
 .users {
   list-style: none;
-  margin-bottom: 20px;
+  margin-bottom: 1.43em;
   li {
     overflow: auto;
-    padding: 10px 0;
-    border-bottom: 2px solid $gray-lighter;
+    padding: 0.71em 0;
+    border-bottom: 0.14em solid $gray-lighter;
   }
 }
 
@@ -275,19 +275,19 @@ input {
 
 .micropost {
   list-style: none;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-top: groove 1px;
+  margin-top: 2.14em;
+  margin-bottom: 0.71em;
+  padding: 0.71em;
+  border-top: groove 0.07em;
 }
 
 .feed {
-  width: 600px;
+  width: 42.86em;
   display: inline-block;
   list-style: none;
-  padding: 20px;
-  border: groove 1px;
-  margin-bottom: 20px;
+  padding: 1.43em;
+  border: groove 0.07em;
+  margin-bottom: 1.43em;
   li {
     list-style: none;
   }
@@ -297,34 +297,34 @@ input {
   }
   .content {
     display: block;
-    margin-left: 60px;
+    margin-left: 4.29em;
     img {
       display: block;
-      padding: 5px 0;
+      padding: 0.36em 0;
     }
   }
   .timestamp {
     color: $gray-light;
     display: block;
-    margin-left: 60px;
+    margin-left: 4.29em;
     text-decoration: none;
   }
   .gravatar {
     float: left;
-    margin-right: 10px;
-    margin-top: 5px;
+    margin-right: 0.71em;
+    margin-top: 0.36em;
   }
 }
 
 aside {
   textarea {
-    height: 100px;
-    margin-bottom: 5px;
+    height: 7.14em;
+    margin-bottom: 0.36em;
   }
 }
 
 span.picture {
-  margin-top: 10px;
+  margin-top: 0.71em;
   input {
     border: 0;
   }
@@ -333,9 +333,9 @@ span.picture {
 /* comments */
 
 .comments {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  margin-left: 20px;
+  margin-top: 0.71em;
+  margin-bottom: 1.43em;
+  margin-left: 1.43em;
 }
 
 /* footer */
