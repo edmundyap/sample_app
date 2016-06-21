@@ -15,7 +15,7 @@ $gray-medium-light: #eaeaea;
 
 body {
   margin-top: 3.57em;
-  padding-top: 3.57em;
+  padding-top: 1em;
 }
 
 section {
@@ -82,7 +82,10 @@ header {
 }
 
 #background {
-    background-color: #ffffe6;
+    background-image: url(smartphone.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     padding: 15em 0;
     text-align: center;
 }
@@ -104,7 +107,7 @@ header {
   margin-left: 0.71em;
 
   a {
-    color: #4d79ff;
+    color: #ffffff;
   }
 }
 
@@ -127,7 +130,7 @@ a:link {
 }
 
 a:hover {
-  color: #ffccb3;
+  color: #80aaff;
 }
 
 .tagline {
